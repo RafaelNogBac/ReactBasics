@@ -32,6 +32,7 @@ function SectionPrimaria() {
         <div className='btns'>
           <BotaoPrimario />
           <BotaoSecundario />
+          
         </div>
       </div>
       <div className='painelInterno'>
