@@ -3,21 +3,34 @@ import './App.css';
 function App() {
   return (
     <div className="App">
-      <div className='App-header'>
-        <h1>Vamos relembrar</h1>
-        <section className='sectioninicial'>
-          <SectionPrimaria />
-        </section>
-      </div>
+      <Header />
+      <section className='sectioninicial'>
+        <Painel titulo="Botão Primário" children={<BotaoPrimario />} />
+        <Painel titulo="Botão Secundário" children={<BotaoSecundario />} />
+        <Painel titulo="Tags" children={<TagA />} />
+      </section>
     </div>
   );
 }
-function SectionPrimaria() {
+function Header() {
+  return (
+    <div className='App-header'>
+      <h1>React Sandbox</h1>
+    </div>
+  );
+}
+function Painel(props) {
   return (
     <div className='painelExterno'>
-      <h4>Teste de componentes</h4>
+      <h4>{props.titulo}</h4>
       <div className='painelInterno'>
-        <h4 className='subTitle'>Tag p</h4>
+        {props.children}
+      </div>
+    </div>
+  )
+}
+function TagA() {
+  return (
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut id mattis arcu,
           ac mollis eros. Duis eu nisl nisi. Vivamus viverra neque dolor, eu vulputate sem
           ornare sit amet. Nam accumsan ante eget quam vestibulum, in efficitur urna congue.
@@ -26,26 +39,13 @@ function SectionPrimaria() {
           sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Cras vestibulum blandit rutrum.
           Nunc sodales, erat a laoreet dignissim, arcu sem condimentum dui, vel semper mauris orci ac neque.
         </p>
-      </div>
-      <div className='painelInterno'>
-        <h4 className='subTitle'>Botões</h4>
-        <div className='btns'>
-          <BotaoPrimario />
-          <BotaoSecundario />
-          
-        </div>
-      </div>
-      <div className='painelInterno'>
-        <h4 className='subTitle'>Inputs texto</h4>
-        <p>Em breve...</p>
-      </div>
-    </div>
   );
 }
+
 function BotaoPrimario() {
   return (
     <div className='buttonContainer'>
-      <button className='btn-primario'>Botao Secundario</button>
+      <button className='btn-primario'>Botao primario</button>
     </div>
   );
 }
