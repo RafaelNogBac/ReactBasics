@@ -1,4 +1,6 @@
 import './App.css';
+import './Componentes.js'
+import { ExemploUseState } from './Componentes.js';
 
 function App() {
   return (
@@ -8,6 +10,7 @@ function App() {
         <Painel titulo="Botão Primário" children={<BotaoPrimario />} />
         <Painel titulo="Botão Secundário" children={<BotaoSecundario />} />
         <Painel titulo="Tags" children={<TagA />} />
+        <Painel titulo="ExemploUseState" children={<ExemploUseState />} />
       </section>
     </div>
   );
@@ -39,22 +42,6 @@ function TagA() {
           sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Cras vestibulum blandit rutrum.
           Nunc sodales, erat a laoreet dignissim, arcu sem condimentum dui, vel semper mauris orci ac neque.
         </p>
-  );
-}
-
-function BotaoPrimario() {
-  return (
-    <div className='buttonContainer'>
-      <button className='btn-primario'>Botao primario</button>
-    </div>
-  );
-}
-
-function BotaoSecundario() {
-  return (
-    <div className='buttonContainer'>
-      <button className='btn-secundario'>Botao Secundario</button>
-    </div>
   );
 }
 
