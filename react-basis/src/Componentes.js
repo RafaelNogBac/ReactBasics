@@ -1,7 +1,7 @@
 import { useState } from 'react';
 
 function BotaoPrimario() {
-    let acao = () =>{
+    const acaoBtn = () =>{
       const tipoBotao = document.getElementsByClassName("btn-primario")
     
       alert(tipoBotao);
@@ -9,7 +9,7 @@ function BotaoPrimario() {
     }
     return (
       <div className='buttonContainer' >
-        <button className='btn-primario' onClick={acao}>Botao primario</button>
+        <button className='btn-primario' onClick={acaoBtn}>Botao primario</button>
       </div>
     );
   }

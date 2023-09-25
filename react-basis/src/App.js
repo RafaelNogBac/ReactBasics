@@ -1,6 +1,6 @@
 import './App.css';
 import './Componentes.js'
-import { ExemploUseState } from './Componentes.js';
+import { ExemploUseState, BotaoPrimario, BotaoSecundario } from './Componentes.js';
 
 function App() {
   return (
